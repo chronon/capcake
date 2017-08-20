@@ -5,7 +5,7 @@ namespace :deploy do
 
       This is similar to running:
 
-          bin/cake Migrations.migrations migrate
+          bin/cake migrations migrate
 
       For help:
 
@@ -21,7 +21,7 @@ namespace :deploy do
 
       This is similar to running:
 
-          bin/cake Migrations.migrations rollback
+          bin/cake migrations rollback
 
       For help:
 
@@ -40,7 +40,7 @@ namespace :cakephp do
     ask(:cmd, "list")
     command = args[:command_name] || fetch(:cmd)
 
-    invoke "cakephp:cake", "Migrations.migrations", command, *args.extras
+    invoke "cakephp:cake", "migrations", command, *args.extras
   end
 
 end
